@@ -1,0 +1,41 @@
+{       
+        "Ridge": 
+        {
+        "fit_intercept": [true, false], 
+        "normalize": [true, false], 
+        "alpha": {"low" : 1, "high" : 200, "step" : 20}, 
+        "random_state": [1]
+        }, 
+        "Lasso": 
+        {
+        "fit_intercept": [true, false], 
+        "normalize": [true, false], 
+        "alpha": {"low" : 1, "high" : 400, "step" : 40}, 
+        "random_state": [1]
+        }, 
+        "ElasticNet": 
+        {
+        "fit_intercept": [true, false], 
+        "normalize": [true, false], 
+        "alpha":  {"low" : 0.01, "high" : 1.5, "step" : 0.1}, 
+        "random_state": [1]
+        }, 
+        "RandomForestRegressor": 
+        {
+        "n_estimators":  {"low" : 10, "high" : 260, "step" : 50}, 
+        "max_depth":  {"low" : 5, "high" : 200, "step" : 25}, 
+        "random_state": [1], 
+        "min_samples_split": [2, 3, 4], 
+        "min_samples_leaf": [1, 2, 3]
+        }, 
+        "SVR": 
+        {
+        "kernel": ["poly", "rbf"], 
+        "degree": [2, 3], 
+        "gamma": ["scale", "auto"], 
+        "C":  [0.1, 1, 5, 100, 1000, 10000, 50000, 100000], 
+        "shrinking": [true, false], 
+        "epsilon": [0, 0.001, 0.01, 0.1, 1, 100, 1000, 5000, 10000], 
+        "scale_data": true
+        }
+}

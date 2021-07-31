@@ -1,0 +1,41 @@
+{       
+        "Ridge": 
+        {
+        "fit_intercept": [true, false], 
+        "normalize": [true, false], 
+        "alpha": {"low" : 1, "high" : 200, "step" : 5}, 
+        "random_state": [1]
+        }, 
+        "Lasso": 
+        {
+        "fit_intercept": [true, false], 
+        "normalize": [true, false], 
+        "alpha": {"low" : 1, "high" : 400, "step" : 10}, 
+        "random_state": [1]
+        }, 
+        "ElasticNet": 
+        {
+        "fit_intercept": [true, false], 
+        "normalize": [true, false], 
+        "alpha":  {"low" : 0.01, "high" : 1.5, "step" : 0.01}, 
+        "random_state": [1]
+        }, 
+        "RandomForestRegressor": 
+        {
+        "n_estimators":  {"low" : 10, "high" : 260, "step" : 10}, 
+        "max_depth":  {"low" : 5, "high" : 200, "step" : 5}, 
+        "random_state": [1], 
+        "min_samples_split":  {"low" : 2, "high" : 5, "step" : 1}, 
+        "min_samples_leaf": [1, 2, 3]
+        }, 
+        "SVR": 
+        {
+        "kernel": ["poly", "rbf"], 
+        "degree": {"low" : 2, "high" : 5, "step" : 1}, 
+        "gamma": ["scale", "auto"], 
+        "C": [0.01, 0.1, 1, 5, 10, 50, 100, 500, 1000, 5000, 10000, 25000, 50000, 75000, 100000], 
+        "shrinking": [true, false], 
+        "epsilon": [0, 0.001, 0.01, 0.1, 1, 5, 10, 100, 500, 1000, 2500, 5000, 7500, 10000], 
+        "scale_data": true
+        }
+}
